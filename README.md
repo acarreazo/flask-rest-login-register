@@ -17,9 +17,10 @@ resultado token </br>
 <h2>get user</h2>
 GET: http://localhost:5000/rest/user </br>
 Basic Authentication : Pasar como parametro el token obtenido en el momento de hacer login </br>
+El resultado que se debe obtener es el hobbie del usuario
 <br/>
 {
-  "message": "El usuario ya existe"
+  "hobbie": "bailar!"
 }
 
 <h2>Create user</h2>
@@ -29,4 +30,13 @@ POST : http://localhost:5000/rest/user </br>
 	"password": "123456",
 	"nombres": "Usuario1",
 	"hobbie" : "Cantar"
+}
+Si el usuario existe se  muestra el siguiente mensaje <br/>
+{
+  "message": "El usuario ya existe"
+} <br/>
+
+Si se creo correctamente el usuario se muestra el siguiente mensaje <br/>
+{
+  "resultado": "ok"
 }
